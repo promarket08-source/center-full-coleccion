@@ -1,0 +1,6 @@
+# Ignore large media files
+*.mp4
+*.webp
+*.png
+*.jpg
+*.jpeg
