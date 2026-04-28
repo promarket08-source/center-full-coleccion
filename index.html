@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Full Colección | Tu Tienda de Cartas Pokémon, Yugioh y My Little Pony en Quilpué</title>
+    <meta name="description" content="La tienda de coleccionables más exclusiva de Quilpué. Cartas Pokémon TCG, Yugioh, My Little Pony, figuras raras y más. Envíos a todo Chile. Visita nuestros locales.">
+    <meta name="keywords" content="cartas pokemon, yugioh, my little pony, cartas coleccionables, tcg, pokemon chile, quilpué, envios chile, cards pokemon Chile, Feria El Belloto, Freire 907">
+    <meta name="geo.region" content="CL-VS">
+    <meta name="geo.placename" content="Quilpué, Chile">
+    <meta name="author" content="Center Full Colección">
+    <meta property="og:title" content="Center Full Colección | Tu Destino de Coleccionables en Quilpué">
+    <meta property="og:description" content="Cartas Pokémon, Yugioh, My Little Pony y más. La colección que buscas está aquí.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://centerfullcoleccion.cl">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #a78bfa;
+            --primary-dark: #8B5CF6;
+            --secondary: #f472b6;
+            --secondary-dark: #EC4899;
+            --accent: #22d3ee;
+            --accent-dark: #06B6D4;
+            --gold: #FACC15;
+            --gold-light: #FDE047;
+            --dark: #05050f;
+            --dark-card: #0f0f25;
+            --dark-section: #0a0a18;
+            --white: #ffffff;
+            --white-soft: #f1f5f9;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --gray-dark: #475569;
+            --holo-cyan: #67e8f9;
+            --holo-magenta: #e879f9;
+            --holo-gold: #FACC15;
+            --shadow: 0 10px 40px rgba(0,0,0,0.3);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.4);
+            --shadow-glow: 0 0 40px rgba(167, 139, 250, 0.4);
+            --shadow-holo: 0 0 30px rgba(167, 139, 250, 0.5), 0 0 60px rgba(244, 114, 182, 0.3);
+            --shadow-gold: 0 0 20px rgba(250, 204, 21, 0.4);
+            --gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+            --gradient-glow: linear-gradient(135deg, #a78bfa 0%, #22d3ee 50%, #f472b6 100%);
+            --gradient-gold: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a18 0%, #0f0f25 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+
+        .glow-text {
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-text {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: var(--white);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--dark) 0%, var(--dark-card) 100%);
+            padding: 10px 0;
+            font-size: 13px;
+            position: relative;
+            z-index: 1001;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 30px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .top-bar-left span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-right a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .top-bar-right a:hover { 
+            color: var(--white); 
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 45px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            padding: 15px 50px;
+            top: 0;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 200vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.9) 100%);
+            z-index: -1;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--holo-cyan);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-20px) scale(1.5); opacity: 1; }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 0 60px rgba(167, 139, 250, 0.6), 0 4px 20px rgba(0, 0, 0, 0.8);
+            letter-spacing: -0.03em;
+        }
+
+        .hero-content .tagline-emotional {
+            font-size: 26px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-badges .badge {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hero-badges .badge:hover {
+            background: rgba(167, 139, 250, 0.25);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
+        }
+
+        .hero-badges .badge i {
+            color: var(--gold);
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .trust-badge i {
+            font-size: 24px;
+            color: var(--gold);
+        }
+
+        /* Featured Products */
+        .featured {
+            padding: 100px 50px;
+            background: var(--dark);
+        }
+
+        .featured .section-header h2,
+        .featured .section-header p {
+            color: var(--white);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            position: relative;
+        }
+
+        .featured-card::before {
+            content: '★';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: var(--gold);
+            font-size: 24px;
+            z-index: 10;
+            text-shadow: 0 0 10px var(--gold);
+        }
+
+        .featured-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(167, 139, 250, 0.3);
+        }
+
+        .featured-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-card-content {
+            padding: 20px;
+        }
+
+        .featured-card h4 {
+            color: var(--white);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .featured-card .price {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .featured-card .rarity {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 100px 50px;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.03em;
+            text-shadow: 0 0 40px rgba(167, 139, 250, 0.3);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(236, 72, 153, 0.3) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-card:hover::after {
+            opacity: 1;
+        }
+
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            color: var(--white);
+        }
+
+        .category-overlay h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-overlay h3 i {
+            color: var(--gold);
+        }
+
+        .category-overlay p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .category-overlay .count {
+            font-size: 12px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Holo Effect */
+        .holo-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holo-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(139, 92, 246, 0.1) 45%,
+                rgba(6, 182, 212, 0.2) 50%,
+                rgba(236, 72, 153, 0.1) 55%,
+                transparent 70%
+            );
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .holo-card:hover::before {
+            animation: holo-sweep 1s ease-in-out;
+            opacity: 1;
+        }
+
+        @keyframes holo-sweep {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        /* Why Choose / Prueba Social */
+        .why-choose {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, #0a0a18 0%, #0f0f25 100%);
+        }
+
+        .why-choose .section-header h2,
+        .why-choose .section-header p {
+            color: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 28px;
+            color: var(--white);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+
+        .why-card h3 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 50px;
+            background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark) 100%);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(15, 15, 37, 0.8) 0%, rgba(20, 20, 45, 0.6) 100%);
+            border-radius: 24px;
+            padding: 35px;
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(167, 139, 250, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card .stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+        }
+
+        .testimonial-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-card .author {
+            color: var(--white);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-card .author img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
+        }
+
+        /* Instagram Feed */
+        .instagram-feed {
+            padding: 100px 50px;
+            background: var(--white);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .instagram-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .instagram-item::after {
+            content: '\f16d';
+            font-family: 'Font Awesome 6 Brands';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .instagram-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Location */
+        .location {
+            padding: 100px 50px;
+            background: var(--dark);
+        }
+
+        .location .section-header h2,
+        .location .section-header p {
+            color: var(--white);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .location-card-header {
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+            padding: 25px;
+            color: var(--white);
+        }
+
+        .location-card-header h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-card-header h3 i {
+            color: var(--gold);
+        }
+
+        .location-card-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .location-card-map {
+            height: 300px;
+        }
+
+        .location-card-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 140px 50px;
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #8B5CF6 100%);
+            background-size: 200% 200%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: cta-gradient 8s ease infinite;
+        }
+
+        @keyframes cta-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 50%);
+            animation: cta-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes cta-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.15); opacity: 0.8; }
+        }
+
+        .cta h2 {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.02em;
+        }
+
+        .cta p {
+            font-size: 22px;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 45px;
+            position: relative;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary-dark);
+            font-size: 18px;
+            padding: 20px 45px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .cta .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .cta .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 50px 30px;
+            background: #0a0a14;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+        }
+
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .footer h4 {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 35px;
+            border-top: 1px solid rgba(167, 139, 250, 0.2);
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-bottom a:hover {
+            text-shadow: 0 0 20px var(--primary);
+        }
+
+        .powered-by {
+            margin-top: 25px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .powered-by a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: rgba(34, 211, 238, 0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .powered-by a:hover {
+            background: rgba(34, 211, 238, 0.2);
+            text-shadow: 0 0 15px var(--accent);
+        }
+
+        /* Floating */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-whatsapp a {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 28px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-whatsapp a:hover { transform: scale(1.1); }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .top-bar-content { flex-direction: column; gap: 10px; padding: 0 20px; }
+            .navbar { padding: 15px 20px; top: 0; }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 40px; }
+            .hero-content p { font-size: 18px; }
+            .categories-grid, .why-grid, .featured-grid, .locations-grid, .testimonial-grid, .instagram-grid { grid-template-columns: 1fr; }
+            .categories, .why-choose, .location, .cta, .featured, .testimonials, .instagram-feed { padding: 60px 20px; }
+            .footer-content { grid-template-columns: 1fr; }
+            .trust-badges { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 { font-size: 32px; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .floating-whatsapp { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> Feria El Belloto Local C4-25</span>
+                <span><i class="fas fa-map-marker-alt"></i> Freire 907 Local 43</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://wa.me/56912345678"><i class="fab fa-whatsapp"></i> Envíos a todo Chile</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Center Full Colección">
+            <span class="logo-text">Center Full</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#featured">Destacados</a></li>
+            <li><a href="#categories">Catálogo</a></li>
+            <li><a href="#testimonials">Reseñas</a></li>
+            <li><a href="#location">Ubicación</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="62058d0189ceb329e032738d3b9208a6.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles">
+            <div class="particle" style="top: 20%; left: 20%;"></div>
+            <div class="particle" style="top: 60%; left: 70%; animation-delay: 0.5s;"></div>
+            <div class="particle" style="top: 30%; left: 80%; animation-delay: 1s;"></div>
+            <div class="particle" style="top: 70%; left: 30%; animation-delay: 1.5s;"></div>
+            <div class="particle" style="top: 40%; left: 50%; animation-delay: 2s;"></div>
+        </div>
+        <div class="hero-content">
+            <h1><span class="glow-text">Tu Historia Comienza Aquí</span></h1>
+            <p class="tagline-emotional">Cada carta cuenta una historia. Cada colección guarda recuerdos únicos.</p>
+            <p>La tienda de tus sueños awaits. Cartas Pokémon, Yugioh, My Little Pony y más.</p>
+            <div class="hero-badges">
+                <span class="badge"><i class="fas fa-shipping-fast"></i> Envíos a Chile</span>
+                <span class="badge"><i class="fas fa-store"></i> 2 Locales</span>
+                <span class="badge"><i class="fas fa-medal"></i> Calidad Premium</span>
+                <span class="badge"><i class="fas fa-heart"></i> Asesoría Personal</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="https://wa.me/56912345678" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Ver Catálogo
+                </a>
+                <a href="https://www.instagram.com/centerfullcoleccion" class="btn btn-instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    Síguenos
+                </a>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Productos 100% Originales</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-star"></i>
+                    <span>+500 Colecciones Vendidas</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-award"></i>
+                    <span>3 Años de Experiencia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+        <div class="section-header">
+            <h2><span class="gold-text">Tesoros</span> Destacados</h2>
+            <p>Las piezas más sought-after por nuestra comunidad de coleccionistas</p>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-card holo-card">
+                <img src="From KlickPin CF Discover Fresh bridal shower themes that are trending right now across Pinterest boards for a polished look people will notice - Pin-1016898790878070553.jpg" alt="Producto 1">
+                <div class="featured-card-content">
+                    <h4>Charizard Holo Ultra Rare</h4>
+                    <div class="price">Consultar precio</div>
+                    <span class="rarity">Edición Limitada</span>
+                </div>
+            </div>
+            <div class="featured-card holo-card">
+                <img src="629924244_18092920877512713_5292048449447621219_n..webp" alt="Producto 2">
+<div class="featured-card-content">
+                    <h4>Blue-Eyes White Dragon</h4>
+                    <div class="price">Consultar precio</div>
+                    <span class="rarity">Legendaria</span>
+                </div>
+            </div>
+            <div class="featured-card holo-card">
+                <img src="657905182_18097729367512713_4695846692957806905_n..webp" alt="Producto 3">
+<div class="featured-card-content">
+                    <h4>Twilight Sparkle</h4>
+                    <div class="price">Consultar precio</div>
+                    <span class="rarity">Colección</span>
+                </div>
+            </div>
+            <div class="featured-card holo-card">
+                <img src="642150792_18093984230512713_1256447480548972356_n..webp" alt="Producto 4">
+                <div class="featured-card-content">
+                    <h4>Pikachu variants</h4>
+                    <div class="price">Consultar precio</div>
+                    <span class="rarity">Rara</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <h2>Nuestra <span class="glow-text">Colección</span></h2>
+            <p>Explora los mejores artículos coleccionables de Chile</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card holo-card">
+                <img src="From KlickPin CF Discover Fresh bridal shower themes that are trending right now across Pinterest boards for a polished look people will notice - Pin-1016898790878070553.jpg" alt="Pokémon">
+                <div class="category-overlay">
+                    <h3><i class="fas fa-dragon"></i> Pokémon</h3>
+                    <p>TCG, figuras, pins y más</p>
+                    <span class="count">+200 cartas</span>
+                </div>
+            </div>
+            <div class="category-card holo-card">
+                <img src="From KlickPin CF Save these 33 Stylish simple dessert ideas that make everyday moments look more intentional memorable and beautifully styled for beginners who want - Pin-420242209002421720.jpg" alt="Yugioh">
+                <div class="category-overlay">
+                    <h3><i class="fas fa-crown"></i> Yugioh</h3>
+                    <p>Cartas y accesorios</p>
+                    <span class="count">+150 cartas</span>
+                </div>
+            </div>
+            <div class="category-card holo-card">
+                <img src="657905182_18097729367512713_4695846692957806905_n..webp" alt="My Little Pony">
+                <div class="category-overlay">
+                    <h3><i class="fas fa-sparkles"></i> My Little Pony</h3>
+                    <p>Figuras y colección</p>
+                    <span class="count">+80 figuras</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2>Lo que dicen <span class="gold-text">nuestros clientes</span></h2>
+            <p>La confianza de cientos de coleccionistas satisfechos</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Encontré la carta que buscaba hace años. Excelente atención y el producto en perfecto estado. ¡Volveré por más!"</p>
+                <div class="author">
+                    <span>Matías R.</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Mi hijo quedó encantado con su compra. Muy buen precio y envío rápido a Antofagasta. Recomendado 100%"</p>
+                <div class="author">
+                    <span>Carla M.</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"La mejor tienda de coleccionables en Quilpué. Tienen de todo y la atención es impecable."</p>
+                <div class="author">
+                    <span>Juan P.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="why-choose" id="why">
+        <div class="section-header">
+            <h2>¿Por qué <span class="glow-text">elegirnos</span>?</h2>
+            <p>La mejor experiencia de compra para coleccionistas</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>Envíos a Chile</h3>
+                <p>Llegamos a cualquier rincón del país</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-store"></i></div>
+                <h3>Dos Locales</h3>
+                <p>Visítanos en Quilpué</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-medal"></i></div>
+                <h3>Calidad Premium</h3>
+                <p>Solo productos originais</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-heart"></i></div>
+                <h3>Atención Cercana</h3>
+                <p>Te asesoramos siempre</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="section-header">
+            <h2>Síguenos en <span class="glow-text">Instagram</span></h2>
+            <p>@centerfullcoleccion - Nuevas llegadas cada semana</p>
+        </div>
+        <div class="instagram-grid">
+            <div class="instagram-item">
+                <img src="629924244_18092920877512713_5292048449447621219_n..webp" alt="IG 1">
+            </div>
+            <div class="instagram-item">
+                <img src="642150792_18093984230512713_1256447480548972356_n..webp" alt="IG 2">
+            </div>
+            <div class="instagram-item">
+                <img src="657905182_18097729367512713_4695846692957806905_n..webp" alt="IG 3">
+            </div>
+            <div class="instagram-item">
+                <img src="642970576_18093958496512713_4549174865318341219_n..webp" alt="IG 4">
+            </div>
+            <div class="instagram-item">
+                <img src="635279123_18092564255512713_4411640899303331552_n..webp" alt="IG 5">
+            </div>
+            <div class="instagram-item">
+                <img src="671106172_18100673084512713_1978648563963100173_n..webp" alt="IG 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location" id="location">
+        <div class="section-header">
+            <h2>Nuestras <span class="gold-text">Ubicaciones</span></h2>
+            <p>Visítanos en Quilpué</p>
+        </div>
+        <div class="locations-grid">
+            <div class="location-card">
+                <div class="location-card-header">
+                    <h3><i class="fas fa-store"></i> Feria El Belloto</h3>
+                    <p>Local C4-25, Quilpué</p>
+                </div>
+                <div class="location-card-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3!2d-71.4425!3d-33.0475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689a5c8a70e3d81%3A0x0!2sQuilpu%C3%A9!5e0!3m2!1ses!2scl!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="location-card">
+                <div class="location-card-header">
+                    <h3><i class="fas fa-store"></i> Freire 907</h3>
+                    <p>Local 43, Quilpué</p>
+                </div>
+                <div class="location-card-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3!2d-71.4425!3d-33.0475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689a5c8a70e3d81%3A0x0!2sQuilpu%C3%A9!5e0!3m2!1ses!2scl!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <h2>¿Listo para completar tu colección?</h2>
+        <p>Contáctanos ahora y encuentra esa pieza única que falta en tu acervo</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/56912345678" class="btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Escríbenos
+            </a>
+            <a href="https://www.instagram.com/centerfullcoleccion" class="btn" target="_blank">
+                <i class="fab fa-instagram"></i>
+                DM Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="Center Full Colección">
+                    <span>Center Full</span>
+                </div>
+                <p class="footer-text">Tu tienda de artículos coleccionables en Quilpué. Pokémon, Yugioh, My Little Pony y más. Envíos a todo Chile desde 2022.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/centerfullcoleccion" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="#featured">Destacados</a></li>
+                    <li><a href="#categories">Catálogo</a></li>
+                    <li><a href="#testimonials">Reseñas</a></li>
+                    <li><a href="#location">Ubicación</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ubicación</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Feria El Belloto Local C4-25</a></li>
+                    <li><a href="#">Freire 907 Local 43, Quilpué</a></li>
+                    <li><a href="#">Envíos a todo Chile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Center Full Colección. Todos los derechos reservados.</p>
+            <p class="powered-by">Impulsado por <a href="https://www.instagram.com/tu.web.pro360" target="_blank">TUWEBPRO360</a> | Sitios web premium</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/56912345678" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Create floating particles
+        const particlesContainer = document.querySelector('.hero-particles');
+        for (let i = 0; i < 10; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
